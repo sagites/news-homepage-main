@@ -10,6 +10,25 @@
     --very-dark-blue: hsl(240, 100%, 5%);
 }
 
+@font-face {
+    font-family: regular;
+    src: url(./assets/fonts/static/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: boldFont;
+    src: url(./assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: veryBold;
+    src: url(./assets/fonts/static/Inter-ExtraBold.ttf);
+}
+
+.sub-section-a {
+    font-family: veryBold
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -47,37 +66,98 @@ li {
     background-color: var(--primary-soft-red);
 }
 
-.sub-section-a h1 {
-    font-weight: 500;
-    font-size: 3.125rem;
-}
-
-
 .second-section {
     background-color: black;
+    font-family: regular;
 }
 
 
-
-
-
-
-@media screen and (min-width:751px ) {
-    .container {
+@media screen and (max-width: 750px) {
+    .app {
         display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        gap: 10px 0;
+        width: 100%;
+        margin: 0 10px;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
     }
 
-    .nav-bar {
-        display: inline-block;
+    .image {
+        content: url(./assets/images/image-web-3-mobile.jpg);
+        width: 400px;
+        height: 400px;
+        display: flex;
     }
 
+    .first-text {
+        width: 100%;
+    }
 
+    .second-section {
+        max-width: 1fr;
+        width: 100%;
+    }
 
 
     .third-section {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: .625rem;
     }
-    
+
+    .small-sections {
+        display: grid;
+        grid-template-columns: 0.74fr 1fr;
+    }
+
+    .smaller-section {
+        width: 100%;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    .smaller-section h1 {
+        margin-top: 0;
+    }
+}
+
+
+@media screen and (min-width:751px ) {
+    header {
+        max-width: 900px;
+
+    }
+
+    .image {
+        content: url(./assets/images/image-web-3-desktop.jpg);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 900px;
+        gap: 30px;
+    }
+
+    .first-section {
+        grid-column: span 2;
+        width: 100px;
+    }
+
+    .second-section {
+        grid-column: 2 / span 1;
+    }
+
+    .image {
+        width: 100%;
+    }
+
 }
 

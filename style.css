@@ -34,23 +34,25 @@ body {
     margin: 0;
 }
 
-li {
-    text-decoration: none;
+ul {
+    list-style: none;
 }
 
+/*colours and sizes*/
 .container {
     background-color: var(--neutral-off-white);
 }
 
-/*colours and sizes*/
 .small-sections h1,
 .fc-1, 
 li {
     color: var(--neutral-grayish-blue);
+    font-family: regular;
 }
 
 .fc-2 {
     color: var(--neutral-off-white);
+    font-family: boldFont;
 }
 
 .fc-3 {
@@ -64,6 +66,7 @@ li {
 
 .btn {
     background-color: var(--primary-soft-red);
+    color: var(--neutral-off-white);
 }
 
 .second-section {
@@ -130,33 +133,96 @@ li {
 
 
 @media screen and (min-width:751px ) {
+    body {
+        padding: 15px;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
     header {
-        max-width: 900px;
+        max-width: 1100px;
 
     }
 
+    .app {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding: auto;
+    }
+
     .image {
-        content: url(./assets/images/image-web-3-desktop.jpg);
+        /* content: url(./assets/images/image-web-3-desktop.jpg); */
+        width: 100%;
+    }
+
+    
+    .first-section {
+        grid-column: span 2;
+        /* width: 100px; */
+    }
+
+    .first-sub-section {
+        display:  grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sub-section-a h1 {
+        font-size: 3.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn {
+        border: none;
+        height: 50px;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: var(--very-dark-blue);
+    }
+
+    .second-section {
+        padding: 30px;
+    }
+
+    .extra .fc-2 {
+        margin-bottom: 0;
+    }
+
+    .extra .fc-1 {
+        line-height: 1.5;
+    }
+
+    .third-section {
+        grid-column: span 3;
+        grid-row: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* gap: 1.25rem; */
+        /* max-width: 1200px; */
+        width: 100%;
+    }
+
+    .small-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .smaller-section h2 {
+        font-family: veryBold;
     }
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        max-width: 900px;
-        gap: 30px;
-    }
-
-    .first-section {
-        grid-column: span 2;
-        width: 100px;
-    }
-
-    .second-section {
-        grid-column: 2 / span 1;
-    }
-
-    .image {
+        max-width: 1200px;
         width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.25rem;
     }
 
 }

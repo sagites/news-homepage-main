@@ -12,19 +12,27 @@
 
   <div class="app">
     <header>
+      <div class="container-logo">
+        <img src="./assets/images/logo.svg" alt="">
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
       <nav class="nav-bar">
-        <li>Home</li>
-        <li>New</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Categories</li>
+        <ul>
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
       </nav>
     </header>
 
     <main class="container">
 
       <div class="first-section">
-        <img class="image" alt="image">
+        <div id="image">
+          <img class="image" src="./assets/images/image-web-3-desktop.jpg" alt="image">
+        </div>
         <div class="first-sub-section">
 
           <div class="sub-section-a">
@@ -47,10 +55,14 @@
           <p class="fc-1">  Will hydrogen-fueled cars ever catch up to EVs?</p>
         </div>
 
+        <hr>
+
         <div class="extra">
           <h1 class="fc-2">The Downsides of AI Artistry </h1>
           <p class="fc-1">  What are the possible adverse effects of on-demand AI image generation?</p>
         </div>
+
+        <hr>
 
         <div class="extra">
           <h1 class="fc-2">Is VC Funding Drying Up?</h1>

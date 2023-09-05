@@ -68,6 +68,11 @@ header {
     margin-inline: auto;
 }
 
+hr {
+    border-top: 1px thin var(--neutral-grayish-blue);
+    height: 1px;
+}
+
 .logo {
     width: clamp(4.4rem, 10vw + 1em, 6.4rem);
 }
@@ -81,6 +86,7 @@ nav ul {
     inset: 0 0 0 30%;
     z-index: 10;
     flex-direction: column;
+    flex-direction: flex-end;
     /* background: hsl(var(--clr-light)); */
     /* padding: min(15rem, 30vh) 2.4rem; */
     /* transform: translateX(100%); */
@@ -290,8 +296,7 @@ header {
     }
 
     header {
-        max-width: 1100px;
-
+        /* max-width: 1100px; */
     }
 
     .primary-navigation a:hover,
@@ -318,17 +323,24 @@ header {
     
     .first-section {
         grid-column: span 2;
+        gap: 20px;
     }
 
     .first-sub-section {
         display:  grid;
         grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding-top: 20px;
     }
 
     .sub-section-a h1 {
         font-size: 3.5rem;
         padding: 0;
         margin: 0;
+    }
+    
+    .first-text {
+        padding-bottom: 30px;
     }
 
     .btn {
@@ -345,8 +357,20 @@ header {
         padding: 30px;
     }
 
+    .fc-3 {
+        padding-bottom: .625rem;
+    }
+
+    .extra {
+        padding-top: 1.25rem;
+    }
+
     .extra .fc-2 {
         margin-bottom: 0;
+    }
+
+    .custom-class {
+        padding-bottom: 20px;
     }
 
     .third-section {
@@ -354,6 +378,7 @@ header {
         /* grid-row: 100px; */
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 3rem;
         /* gap: 1.25rem; */
         /* max-width: 1200px; */
         width: 100%;
